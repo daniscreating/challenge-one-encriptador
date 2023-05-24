@@ -4,7 +4,7 @@
 
 Crear una aplicación que encripta textos que sea capaz de intercambiar mensajes secretos con otras personas que sepan el secreto de la encriptación utilizada.
 
-## Llaves de la encriptación
+# Llaves de la encriptación
 
 - La letra "e" es convertida para "enter"
 - La letra "i" es convertida para "imes"
