@@ -1,0 +1,299 @@
+:root{
+    --border: #e0e0e0;
+	--text1: #2f2f2ffa;
+    --text2: #6c7890;
+
+    --strong-blue: #103c74;
+	--white: #ffffff;
+	--blue: #c9e5fc;
+	--light-blue: #f4f7fd;
+
+    --padding-container: 50px 0;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero{
+    background-color: var(--white);
+    position: relative;
+}
+
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 1200px;
+    padding: var(--padding-container);
+    position: relative;
+}
+
+.nav{
+    --padding-container: 30px 0;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid var(--border);
+}
+
+.nav_logo{
+    width: 2rem;
+    display: block;
+    margin-inline-start: 0;
+}
+
+
+.main_container{
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+}
+
+
+.controles{
+    display: flex;
+    gap: 1em;
+    padding-bottom: 10px;
+}
+
+
+.encriptar, .desencriptar{
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+
+.encriptar:hover, .desencriptar:hover{    
+    background-color: var(--light-blue);
+    cursor: pointer;
+}
+
+.cta{
+    display: inline-block;
+    color: var(--strong-blue);
+    background-color: transparent;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: .7em 2em;
+    border: var(--border);
+    border-width: 1px;
+    border-radius: 1em;
+}
+
+.cajaTexto{
+    border: 1px solid var(--border);
+    border-radius: 6px;
+}
+
+
+#mensajeEntrada{
+    display: block;
+    max-width: 550px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: inherit;
+    border: none;
+    
+    resize: none;
+    padding: .7em;
+
+    font-size: 14px;
+}
+
+#mensajeEntrada:focus{
+    outline:none;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+
+}
+
+.info p{
+    font-size: .7rem;
+    color: var(--text2);
+    margin-top: 1em;
+}
+
+.info-icon{
+    width: 16px;
+    color: var(--text2);
+}
+
+.vaciar{
+    width: 2em;
+    height: 2em;
+    text-align:center;
+    padding-top: 0.1em;
+}
+
+
+.vaciar:hover{
+    border: 1px solid #f5f5f5;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+    cursor: pointer;
+}
+
+#botonVaciar{
+    color: var(--text2);
+    padding: 0; 
+    margin: 0;
+    padding-top: .3em;
+    padding: .2em;
+    display: none;
+ 
+}
+
+
+.hero_result{
+    margin: 3.5em 0 2em;
+    text-align: center;
+    width: 350px;
+}
+
+.text_title{
+    font-size: 1.2em;
+    color: var(--strong-blue);
+    margin-bottom: 10px;
+}
+
+.result_p{
+    line-height: 1.5;
+    font-size: .8em;
+    margin-bottom: 10px;
+    color: var(--text1);
+}
+
+.cajaSalida{
+    width: 100%;
+    height: 185px; 
+    background-color: var(--blue);
+    border-radius: 6px; 
+}
+
+#mensajeSalida{
+    width: 100%;
+    height: 150px;
+    
+   
+    color: black;
+    text-align: left;
+    font-size: 14px;
+    padding: .8em;
+}
+
+.copiar{
+    width: 2em;
+    height: 2em;
+    margin-right: .8em;
+    margin-bottom: .5em;
+    display: none;
+}
+
+
+.copiar:hover{
+    border: 1px solid #a1cef2;
+    border-radius: 50%;
+    background-color: #a1cef2;
+}
+
+
+.cta_copy{
+    color: var(--text2);
+    padding: 0.5em 0.5em;
+}
+
+
+.hero_title{
+    font-size: 1.7rem;
+}
+
+
+.hero_paragraph{
+    line-height: 1.5;
+    margin: 1.2em 0 1.7em;
+}
+
+
+.hero_contact{
+    display: flex;
+    gap: 1.5em;
+}
+
+.hero_link{
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero_icon{
+    width: 23px;
+    color: #103c74;
+}
+
+@media (min-width:768px) {
+    .hero::before{
+        height: 100%;
+        background-image: url("/images/bg-desktop.svg");
+        background-size: 100% 100%;
+    }
+
+    /* .hero_title{
+        margin: 0 0 4px 6px;
+    } */
+
+    .main_container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        --padding-container: 20px 0 60px;
+    }
+
+    .hero_entry{
+        flex-basis: 45%;
+       
+    }
+
+    .hero_img{
+        max-width: unset;
+    }
+
+    .hero_result{
+        flex-basis: 50%;
+        text-align: left;
+        margin: 0;
+        height: 240px;
+    }
+
+    .hero_title{
+        font-size: 2rem;
+    }
+
+    .hero_contact{
+        margin-inline-end: 0;
+        margin-top: 1.5em;
+    }
+
+    .text_title{
+        margin-top: 0.3em;
+        margin-bottom: 0.4em;
+    } 
+
+    
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/svg" href="/images/logo-alura.svg">
+  <title>Encriptador de texto</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Style css -->
+  <link rel="stylesheet" href="style.css">
+  <!-- CSS icons -->
+	<link href='https://css.gg/css' rel='stylesheet'>
+  
+</head>
+
+<body>
+  
+
+  <header class="hero">
+    <nav class="nav container">
+      <img src="images/logo-alura.svg" alt="logo" class="nav_logo">
+      <h1 class="hero_title">Encriptador de texto</h1>
+    </nav>
+  </header>  
+
+  <main>
+
+    <section class="main_container container">
+
+      <div class="hero_entry">
+
+        <div class="controles">
+          <div class="encriptar">
+            <a href="#" class="cta cta-encriptar" id="botonEncriptar" onclick="encriptarMensaje()">Encriptar</a>
+          </div>
+
+          <div class="desencriptar">
+            <a href="#" class="cta cta-desencriptar" id="botonDesencriptar" onclick="desencriptarMensaje()">Desencriptar</a>
+          </div>
+        </div>
+        
+        <div class="cajaTexto">
+          <textarea class="textarea" id="mensajeEntrada" cols="40" rows="10" placeholder="Ingrese el texto aquí" required onkeyup="habilitarBotonVaciar()"></textarea>
+          <div class="info">
+            <p>
+            <img src="/images/info.svg" alt="" class="info-icon"></i>Solo letras minúsculas y sin acento.</p>
+            <div class="vaciar">
+              <button class="cta cta-vaciar" id="botonVaciar" onclick="vaciarTextarea()"><i class="gg-trash"></i></button>
+              <!-- <a href="" class="cta cta-vaciar" id="botonVaciar" onclick="vaciarTextarea()" disabled><i class="gg-trash"></i></a> -->
+            </div>
+            
+          </div>
+        </div>
+        
+        
+      </div>
+
+      <div class="hero_result">
+        <h1 class="text_title">Texto desencriptado</h1>
+        <p class="result_p">Aquí aparecerá tu mensaje encriptado o desencriptado</p>
+
+        <div class="cajaSalida">
+          <div id="mensajeSalida"></div>
+
+          <div class="copiar" id="copiar">
+            <a href="#" id=botonCopiar class="cta cta_copy" onclick="copiar()"><i class="gg-copy"></i></a>
+          </div>
+
+        </div>
+        
+       
+      </div>
+
+      <div class="hero_contact">
+
+        <a href="https://www.linkedin.com/in/daniela-rivera-165005206/" class="hero_link" target="_blank">
+          <img src="images/linkedin.svg" class="hero_icon">
+        </a>
+
+        <a href="https://github.com/sd-rv" class="hero_link" target="_blank">
+          <img src="images/github.svg" class="hero_icon">
+        </a>
+
+        <a href="https://www.aluracursos.com/" class="hero_link" target="_blank">
+          <img src="images/logo-alura.svg" class="hero_icon">
+        </a>
+      </div>
+
+    </section>
+
+  </main>
+  
+  <script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>
